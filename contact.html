@@ -3,77 +3,64 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us - Thevenin Education Services</title>
+    <title>About Us - Thevenin Education Services</title>
+    <meta name="description" content="Learn about the mission, vision, and values of Thevenin Education Services and discover why we are the trusted choice for study abroad guidance.">
+    <meta name="keywords" content="Thevenin, About Us, mission, vision, values, why choose us, study abroad, education services">
+    <meta name="author" content="Thevenin Education Services">
+    
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
     <header class="main-header">
-        <div class="logo">
-            <a href="index.html">Thevenin Education Services</a>
+        <div class="container">
+            <div class="logo">
+                <a href="index.html">Thevenin Education Services</a>
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="universities.html">Universities</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </nav>
         </div>
-        <nav class="main-nav">
-            <ul>
-                <li><a href="about.html">About Us</a></li>
-                <li><a href="services.html">Services</a></li>
-                <li><a href="universities.html">Universities</a></li>
-                <li><a href="contact.html">Contact Us</a></li>
-            </ul>
-        </nav>
     </header>
 
-    <section class="contact-section">
-        <div class="container">
-            <h1 class="page-heading">Get in Touch</h1>
-            <p class="page-subheading">We'd love to hear from you. Fill out the form below or contact us directly.</p>
-            
-            <div class="contact-layout">
+    <main>
+        <section class="about-section">
+            <div class="container">
+                <h1 class="page-heading">About Thevenin Education Services</h1>
+                <p class="page-subheading">We are dedicated to empowering students to achieve their academic and career aspirations on a global scale. Our mission is to provide personalized, professional guidance that simplifies the complex journey of studying abroad.</p>
                 
-                <div class="contact-form-container">
-                    <form name="contact" method="POST" data-netlify="true">
-                        <input type="hidden" name="form-name" value="contact">
-                        
-                        <div class="form-group">
-                            <label for="name">Your Name</label>
-                            <input type="text" id="name" name="name" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="email">Your Email</label>
-                            <input type="email" id="email" name="email" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="message">Your Message</label>
-                            <textarea id="message" name="message" rows="6" required></textarea>
-                        </div>
-                        <button type="submit" class="cta-button primary">Send Message</button>
-                    </form>
+                <div class="about-grid">
+                    <article class="about-card">
+                        <h2 class="section-title">Our Mission</h2>
+                        <p>To be the most trusted partner in global education, guiding students toward the best universities and programs that align with their unique goals and potential.</p>
+                    </article>
+                    <article class="about-card">
+                        <h2 class="section-title">Our Vision</h2>
+                        <p>To create a world where every student has the opportunity to receive a world-class education and build a successful global career.</p>
+                    </article>
+                    <article class="about-card">
+                        <h2 class="section-title">Our Values</h2>
+                        <ul>
+                            <li><strong>Integrity:</strong> We operate with honesty and transparency in every interaction.</li>
+                            <li><strong>Excellence:</strong> We are committed to delivering the highest quality of service.</li>
+                            <li><strong>Student-Centric:</strong> Your success is our priority, and our advice is tailored to your needs.</li>
+                        </ul>
+                    </article>
                 </div>
-
-                <div class="contact-info-container">
-                    <div class="info-block">
-                        <h4>Contact Details</h4>
-                        <p>
-                            <strong>Email:</strong> <a href="mailto:info@thevenin.com">info@thevenin.com</a><br>
-                            <strong>Phone:</strong> <a href="tel:+11234567890">+1 (123) 456-7890</a>
-                        </p>
-                    </div>
-                    <div class="info-block">
-                        <h4>Our Location</h4>
-                        <p>
-                            123 Education Drive<br>
-                            Cityville, State, 12345<br>
-                            Country
-                        </p>
-                    </div>
-                    
-                    <div class="map-placeholder">
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.251918451842!2d144.9631627153164!3d-37.81627917975191!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad642af0f11fd81%3A0x2f91b7d5a5e3c7c2!2sMelbourne%20VIC%2C%20Australia!5e0!3m2!1sen!2suk!4v1614948092225!5m2!1sen!2suk" width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-                    </div>
+                
+                <div class="why-us-section">
+                    <h2 class="section-title">Why Choose Us?</h2>
+                    <p>We offer expert guidance and personalized support every step of the way, from initial consultation to pre-departure preparation. Our team has extensive knowledge of international education systems and admission processes, ensuring you receive the best advice to make informed decisions about your future.</p>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
+    </main>
 
     <footer class="main-footer">
         <div class="container">
@@ -83,6 +70,6 @@
             </div>
         </div>
     </footer>
-    
+
 </body>
 </html>
