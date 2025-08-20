@@ -19,9 +19,10 @@
             </div>
             <nav class="main-nav">
                 <ul>
-                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
                     <li><a href="services.html">Services</a></li>
-                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
                 </ul>
             </nav>
         </div>
@@ -54,16 +55,20 @@
                 <h2 class="section-title">Our Core Services</h2>
                 <div class="service-cards">
                     <article class="card">
-                        <h3>Student Advisory</h3>
+                        <h3>University and Course Selection</h3>
                         <p>Personalized guidance to match your academic goals with the right programs and universities.</p>
                     </article>
                     <article class="card">
-                        <h3>Global Study Pathways</h3>
+                        <h3>Application Support</h3>
                         <p>Expert support for university applications, essays, and admission requirements worldwide.</p>
                     </article>
                     <article class="card">
-                        <h3>Visa & Pre-Departure Support</h3>
+                        <h3>Visa Guidance</h3>
                         <p>Comprehensive assistance to ensure a smooth transition from your home country to your new one.</p>
+                    </article>
+                    <article class="card">
+                        <h3>Scholarship and Funding Advice</h3>
+                        <p>Guidance on finding and applying for scholarships and other funding opportunities to support your studies.</p>
                     </article>
                 </div>
             </div>
@@ -76,24 +81,41 @@
                 
                 <div class="contact-layout">
                     <div class="contact-form-container">
-                        <form name="contact" method="POST" data-netlify="true">
-                            <input type="hidden" name="form-name" value="contact">
-                            <div class="form-group"><label for="name">Your Name</label><input type="text" id="name" name="name" required></div>
-                            <div class="form-group"><label for="email">Your Email</label><input type="email" id="email" name="email" required></div>
-                            <div class="form-group"><label for="message">Your Message</label><textarea id="message" name="message" rows="6" required></textarea></div>
+                        <form action="https://docs.google.com/forms/d/e/1FAIpQLSeGEnqjyGkTzsae1135w7AVl_crKfSGqhS3CMDE5QGwMECb7g/formResponse" method="POST">
+                            <div class="form-group">
+                                <label for="name">Your Name</label>
+                                <input type="text" id="name" name="entry.1435166556" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Your Email</label>
+                                <input type="email" id="email" name="entry.1494542109" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="message">Your Message</label>
+                                <textarea id="message" name="entry.1146191853" rows="6" required></textarea>
+                            </div>
                             <button type="submit" class="cta-button primary">Send Message</button>
                         </form>
                     </div>
                     <div class="contact-info-container">
                         <div class="info-block">
                             <h4>Contact Details</h4>
-                            <p><strong>Email:</strong> <a href="mailto:info@thevenin.com">info@thevenin.com</a><br><strong>Phone:</strong> <a href="tel:+11234567890">+1 (123) 456-7890</a></p>
+                            <p>
+                                <strong>Email:</strong> <a href="mailto:info@thevenin.com">info@thevenin.com</a><br>
+                                <strong>Phone:</strong> <a href="tel:+11234567890">+1 (123) 456-7890</a>
+                            </p>
                         </div>
                         <div class="info-block">
                             <h4>Our Location</h4>
-                            <p>123 Education Drive<br>Cityville, State, 12345<br>Country</p>
+                            <p>
+                                123 Education Drive<br>
+                                Cityville, State, 12345<br>
+                                Country
+                            </p>
                         </div>
-                        <div class="map-placeholder"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.251918451842!2d144.9631627153164!3d-37.81627917975191!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad642af0f11fd81%3A0x2f91b7d5a5e3c7c2!2sMelbourne%20VIC%2C%20Australia!5e0!3m2!1sen!2suk!4v1614948092225!5m2!1sen!2suk" width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy"></iframe></div>
+                        <div class="map-placeholder">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.251918451842!2d144.9631627153164!3d-37.81627917975191!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad642af0f11fd81%3A0x2f91b7d5a5e3c7c2!2sMelbourne%20VIC%2C%20Australia!5e0!3m2!1sen!2suk!4v1614948092225!5m2!1sen!2suk" width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -110,4 +132,3 @@
     </footer>
 </body>
 </html>
-
