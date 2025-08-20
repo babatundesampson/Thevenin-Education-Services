@@ -1,4 +1,4 @@
-/* --- CSS Variables for Easy Theming --- */
+/* --- Global Variables & Base Styles --- */
 :root {
     --primary-color: #0d1a2d; /* Dark Navy */
     --secondary-color: #ffd700; /* Gold */
@@ -10,7 +10,6 @@
     --shadow-medium: rgba(0,0,0,0.15);
 }
 
-/* --- General Body and Font Styles --- */
 body {
     font-family: 'Montserrat', sans-serif;
     margin: 0;
@@ -24,6 +23,38 @@ body {
     max-width: 1100px;
     margin: 0 auto;
     padding: 0 20px;
+}
+
+/* --- Heading Styles for a Clear Hierarchy --- */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Montserrat', sans-serif;
+    color: var(--primary-color);
+    line-height: 1.2;
+}
+
+/* For the main headline on the Hero section */
+.hero-content h1 {
+    font-size: 4em;
+    font-weight: 700;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    color: var(--text-color-light);
+}
+
+/* For main section titles like "Our Core Services" */
+.section-title {
+    font-size: 2.5em;
+    font-weight: 700;
+    color: var(--primary-color);
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+/* For sub-headings inside cards or smaller sections */
+.card h3 {
+    font-size: 1.5em;
+    font-weight: 600;
+    margin-top: 0;
 }
 
 /* --- Header and Navigation --- */
@@ -102,22 +133,6 @@ body {
     padding: 20px;
 }
 
-/* --- Specific Heading Styles --- */
-h1, h2, h3, h4, h5, h6 {
-    font-family: 'Montserrat', sans-serif;
-    color: var(--primary-color);
-    line-height: 1.2;
-}
-
-/* For the main headline on the Hero section */
-.hero-content h1 {
-    font-size: 4em;
-    font-weight: 700;
-    margin-bottom: 20px;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-    color: var(--text-color-light);
-}
-
 .hero-content p {
     font-size: 1.2em;
     margin-bottom: 40px;
@@ -158,14 +173,6 @@ h1, h2, h3, h4, h5, h6 {
     text-align: center;
 }
 
-.section-title {
-    font-size: 2.5em;
-    font-weight: 700;
-    color: var(--primary-color);
-    margin-bottom: 40px;
-    text-align: center;
-}
-
 .service-cards {
     display: flex;
     justify-content: center;
@@ -188,12 +195,6 @@ h1, h2, h3, h4, h5, h6 {
 .card:hover {
     transform: translateY(-10px);
     box-shadow: 0 8px 15px var(--shadow-medium);
-}
-
-.card h3 {
-    font-size: 1.5em;
-    font-weight: 600;
-    margin-top: 0;
 }
 
 /* --- Footer --- */
@@ -249,7 +250,7 @@ h1, h2, h3, h4, h5, h6 {
     grid-template-columns: 2fr 1fr;
     gap: 40px;
     align-items: start;
-    background-color: var(--text-color-light);
+    background-color: #fff;
     padding: 40px;
     border-radius: 10px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
@@ -343,11 +344,8 @@ h1, h2, h3, h4, h5, h6 {
         margin-left: 0;
         margin-top: 10px;
     }
-    .service-cards {
+    .service-cards, .contact-layout {
         flex-direction: column;
         align-items: center;
-    }
-    .contact-layout {
-        grid-template-columns: 1fr;
     }
 }
