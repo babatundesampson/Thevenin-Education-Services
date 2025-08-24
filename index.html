@@ -7,12 +7,16 @@
     <meta name="description" content="Guiding students to global success with expert advice on study abroad programs, university applications, and career pathways.">
     <meta name="keywords" content="Thevenin, education, study abroad, university, admissions, visa support, scholarships, career guidance">
     <meta name="author" content="Thevenin Education Services">
+    
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="script.js" defer></script>
 </head>
 <body>
 
-    <header class="main-header">
+    <header class="main-header" id="main-header">
         <div class="container">
             <div class="logo">
                 <a href="index.html">Thevenin Education Services</a>
@@ -30,113 +34,75 @@
 
     <main>
         <section id="hero" class="hero-section">
-            <div class="hero-bg">
-                <img src="graduation-image.jpg" alt="Students celebrating graduation" class="hero-image">
-            </div>
-            <div class="hero-content">
-                <h1>Unlock Your Future with Thevenin Education Services</h1>
-                <p>Guiding students to global success through personalized education and career pathways.</p>
+            <div class="container">
+                <h1 class="hero-heading">Unlock Your Future with Thevenin</h1>
+                <p class="hero-subheading">Guiding students to global success through personalized education and career pathways.</p>
                 <div class="hero-buttons">
                     <a href="contact.html" class="cta-button primary">Get Started</a>
-                    <a href="services.html" class="cta-button secondary">Explore Services</a>
                 </div>
             </div>
         </section>
 
-        <section class="about-section">
+        <section id="services" class="section services-section">
             <div class="container">
-                <h2 class="section-title">About Thevenin Education Services</h2>
-                <p>We are dedicated to empowering students to achieve their academic and career aspirations on a global scale. Our mission is to provide personalized, professional guidance that simplifies the complex journey of studying abroad.</p>
+                <h2 class="section-title">Our Services</h2>
+                <div class="services-grid">
+                    <div class="service-card">
+                        <h3 class="card-title">University Selection</h3>
+                        <p class="card-description">Expert guidance to help you choose the ideal university and program based on your goals.</p>
+                    </div>
+                    <div class="service-card">
+                        <h3 class="card-title">Application Support</h3>
+                        <p class="card-description">Comprehensive assistance with applications, essays, and all required documents.</p>
+                    </div>
+                    <div class="service-card">
+                        <h3 class="card-title">Visa Guidance</h3>
+                        <p class="card-description">Step-by-step assistance with the visa application process to ensure a smooth transition.</p>
+                    </div>
+                    <div class="service-card">
+                        <h3 class="card-title">Scholarship Advice</h3>
+                        <p class="card-description">Personalized advice on finding and applying for scholarships and other funding opportunities.</p>
+                    </div>
+                </div>
             </div>
         </section>
         
-        <section class="services-overview">
+        <section id="about" class="section about-section">
             <div class="container">
-                <h2 class="section-title">Our Core Services</h2>
-                <div class="service-cards">
-                    <article class="card">
-                        <h3>University and Course Selection</h3>
-                        <p>Personalized guidance to match your academic goals with the right programs and universities.</p>
-                    </article>
-                    <article class="card">
-                        <h3>Application Support</h3>
-                        <p>Expert support for university applications, essays, and admission requirements worldwide.</p>
-                    </article>
-                    <article class="card">
-                        <h3>Visa Guidance</h3>
-                        <p>Comprehensive assistance to ensure a smooth transition from your home country to your new one.</p>
-                    </article>
-                    <article class="card">
-                        <h3>Scholarship and Funding Advice</h3>
-                        <p>Guidance on finding and applying for scholarships and other funding opportunities to support your studies.</p>
-                    </article>
-                </div>
+                <h2 class="section-title">About Us</h2>
+                <p class="about-description">Thevenin is a dedicated team of education consultants committed to empowering students to achieve their academic and career aspirations. We believe in a personalized approach, offering tailored guidance every step of the way.</p>
             </div>
         </section>
 
-        <section class="contact-section">
+        <section id="contact" class="section contact-section">
             <div class="container">
                 <h2 class="section-title">Get in Touch</h2>
-                <p class="section-description">We'd love to hear from you. Fill out the form below or contact us directly.</p>
-                
-                <div class="contact-layout">
-                    <div class="contact-form-container">
-                        <form action="https://docs.google.com/forms/d/e/1FAIpQLSeGEnqjyGkTzsae1135w7AVl_crKfSGqhS3CMDE5QGwMECb7g/formResponse" method="POST">
-                            <div class="form-group">
-                                <label for="name">Your Name</label>
-                                <input type="text" id="name" name="entry.1435166556" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="email">Your Email</label>
-                                <input type="email" id="email" name="entry.1494542109" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="message">Your Message</label>
-                                <textarea id="message" name="entry.1146191853" rows="6" required></textarea>
-                            </div>
-                            <button type="submit" class="cta-button primary">Send Message</button>
-                        </form>
-                    </div>
-                    <div class="contact-info-container">
-                        <div class="info-block">
-                            <h4>Contact Details</h4>
-                            <p>
-                                <strong>Email:</strong> <a href="mailto:info@thevenin.com">info@thevenin.com</a><br>
-                                <strong>Phone:</strong> <a href="tel:+11234567890">+447400092856</a>
-                            </p>
+                <div class="contact-form-container">
+                    <form action="https://docs.google.com/forms/d/e/1FAIpQLSeGEnqjyGkTzsae1135w7AVl_crKfSGqhS3CMDE5QGwMECb7g/formResponse" method="POST">
+                        <input type="hidden" name="form-name" value="contact">
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" name="entry.1435166556" required>
                         </div>
-                        <div class="info-block">
-                            <h4>Our Location</h4>
-                            <p>
-                               4 Wayfaring Avenue<br>
-                               Newcastle<br>
-                                United Kingdom
-                            </p>
-                        <div class="map-placeholder">
-  <iframe
-    src="https://www.google.com/maps?q=Newcastle%20upon%20Tyne%2C%20UK&z=12&output=embed"
-    width="100%"
-    height="250"
-    style="border:0;"
-    allowfullscreen
-    loading="lazy"
-    referrerpolicy="no-referrer-when-downgrade"
-    title="Map of Newcastle upon Tyne, UK">
-  </iframe>
-</div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="entry.1494542109" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="entry.1146191853" rows="6" required></textarea>
+                        </div>
+                        <button type="submit" class="cta-button primary">Send Message</button>
+                    </form>
+                </div>
+            </div>
         </section>
     </main>
 
     <footer class="main-footer">
         <div class="container">
-            <p>© 2025 Thevenin Education Services. All Rights Reserved.</p>
-            <div class="footer-links">
-                <a href="#">Privacy Policy</a> | <a href="#">Terms of Use</a>
-            </div>
+            <p>&copy; 2024 Thevenin Education Services. All Rights Reserved.</p>
         </div>
     </footer>
 </body>
 </html>
-
-
-
