@@ -3,15 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Thevenin Education Services - Global Student Guidance</title>
-    <meta name="description" content="Guiding students to global success with expert advice on study abroad programs, university applications, and career pathways.">
+    <title>Thevenin Education Services</title>
+    <meta name="description" content="Guiding students to global success through personalized education and career pathways.">
     <meta name="keywords" content="Thevenin, education, study abroad, university, admissions, visa support, scholarships, career guidance">
     <meta name="author" content="Thevenin Education Services">
     
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
     <script src="script.js" defer></script>
 </head>
 <body>
@@ -34,66 +34,100 @@
 
     <main>
         <section id="hero" class="hero-section">
-            <div class="container">
-                <h1 class="hero-heading">Unlock Your Future with Thevenin</h1>
-                <p class="hero-subheading">Guiding students to global success through personalized education and career pathways.</p>
-                <div class="hero-buttons">
-                    <a href="contact.html" class="cta-button primary">Get Started</a>
+            <div class="video-container">
+                <video autoplay muted loop id="hero-video">
+                    <source src="your-video-file.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <div class="hero-content">
+                    <h1>Thevenin Education Services</h1>
+                    <p class="subheading">Your gateway to global education</p>
+                    <a href="contact.html" class="cta-button">Enquire Now</a>
                 </div>
             </div>
         </section>
 
+        <section id="services" class="section services-section">
+            <div class="container">
+                <h2 class="section-title">Our Services</h2>
+                <div class="services-grid">
+                    <div class="service-card">
+                        <img src="placeholder-icon.png" alt="Visa Icon" class="service-icon">
+                        <h3 class="card-title">Visa & Pre-Departure Support</h3>
+                        <p class="card-description">Comprehensive assistance with visa applications and essential pre-departure arrangements.</p>
+                    </div>
+                    <div class="service-card">
+                        <img src="placeholder-icon.png" alt="Application Icon" class="service-icon">
+                        <h3 class="card-title">Application & Admissions</h3>
+                        <p class="card-description">Expert guidance through the university application process to secure your admission.</p>
+                    </div>
+                    <div class="service-card">
+                        <img src="placeholder-icon.png" alt="Career Icon" class="service-icon">
+                        <h3 class="card-title">Career Guidance</h3>
+                        <p class="card-description">Personalized career counseling to help you choose a path that fits your goals and aspirations.</p>
+                    </div>
+                    <div class="service-card">
+                        <img src="placeholder-icon.png" alt="Scholarship Icon" class="service-icon">
+                        <h3 class="card-title">Scholarship & Funding Advice</h3>
+                        <p class="card-description">Assistance in finding and applying for scholarships and other financial aid opportunities.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
         <section id="about" class="section about-section">
             <div class="container">
                 <h2 class="section-title">About Us</h2>
                 <p class="about-description">Thevenin is a dedicated team of education consultants committed to empowering students to achieve their academic and career aspirations. We believe in a personalized approach, offering tailored guidance every step of the way.</p>
             </div>
         </section>
-        
-        <section id="services" class="section services-section">
-            <div class="container">
-                <h2 class="section-title">Our Services</h2>
-                <div class="services-grid">
-                    <div class="service-card">
-                        <h3 class="card-title">University Selection</h3>
-                        <p class="card-description">Expert guidance to help you choose the ideal university and program based on your goals.</p>
-                    </div>
-                    <div class="service-card">
-                        <h3 class="card-title">Application Support</h3>
-                        <p class="card-description">Comprehensive assistance with applications, essays, and all required documents.</p>
-                    </div>
-                    <div class="service-card">
-                        <h3 class="card-title">Visa Guidance</h3>
-                        <p class="card-description">Step-by-step assistance with the visa application process to ensure a smooth transition.</p>
-                    </div>
-                    <div class="service-card">
-                        <h3 class="card-title">Scholarship Advice</h3>
-                        <p class="card-description">Personalized advice on finding and applying for scholarships and other funding opportunities.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
 
         <section id="contact" class="section contact-section">
             <div class="container">
-                <h2 class="section-title">Get in Touch</h2>
-                <div class="contact-form-container">
-                    <form action="https://docs.google.com/forms/d/e/1FAIpQLSeGEnqjyGkTzsae1135w7AVl_crKfSGqhS3CMDE5QGwMECb7g/formResponse" method="POST">
-                        <input type="hidden" name="form-name" value="contact">
-                        <div class="form-group">
-                            <label for="name">Name</label>
-                            <input type="text" id="name" name="entry.1435166556" required>
+                <h2 class="section-title">Contact Us</h2>
+                <div class="contact-layout">
+                    <div class="contact-form-container">
+                        <form action="https://docs.google.com/forms/d/e/1FAIpQLSeGEnqjyGkTzsae1135w7AVl_crKfSGqhS3CMDE5QGwMECb7g/formResponse" method="POST">
+                            <input type="hidden" name="form-name" value="contact">
+                            <div class="form-group">
+                                <label for="name">Name</label>
+                                <input type="text" id="name" name="entry.1435166556" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input type="email" id="email" name="entry.1494542109" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">Phone</label>
+                                <input type="tel" id="phone" name="entry.YOUR_PHONE_ID" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="message">Message</label>
+                                <textarea id="message" name="entry.1146191853" rows="6" required></textarea>
+                            </div>
+                            <button type="submit" class="cta-button primary">Submit</button>
+                        </form>
+                    </div>
+                    <div class="contact-info-container">
+                        <div class="info-block">
+                            <h4>Contact Details</h4>
+                            <p>
+                                <strong>Email:</strong> <a href="mailto:info@thevenin.com">info@thevenin.com</a><br>
+                                <strong>Phone:</strong> <a href="tel:+11234567890">+1 (123) 456-7890</a>
+                            </p>
                         </div>
-                        <div class="form-group">
-                            <label for="email">Email</label>
-                            <input type="email" id="email" name="entry.1494542109" required>
+                        <div class="info-block">
+                            <h4>Our Location</h4>
+                            <p>
+                                123 Education Drive<br>
+                                Cityville, State, 12345<br>
+                                Country
+                            </p>
                         </div>
-                        <div class="form-group">
-                            <label for="message">Message</label>
-                            <textarea id="message" name="entry.1146191853" rows="6" required></textarea>
+                        <div class="map-placeholder">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.251918451842!2d144.9631627153164!3d-37.81627917975191!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad642af0f11fd81%3A0x2f91b7d5a5e3c7c2!2sMelbourne%20VIC%2C%20Australia!5e0!3m2!1sen!2suk!4v1614948092225!5m2!1sen!2suk" width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
                         </div>
-                        <button type="submit" class="cta-button primary">Send Message</button>
-                    </form>
+                    </div>
                 </div>
             </div>
         </section>
