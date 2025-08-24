@@ -1,13 +1,20 @@
 /* --- Global Variables & Base Styles --- */
 :root {
-    --primary-color: #0d1a2d; /* Dark Navy */
-    --secondary-color: #ffd700; /* Gold */
-    --accent-color: #e6c200;
-    --text-color-dark: #333;
-    --text-color-light: #ffffff;
-    --bg-color-light: #f4f4f4;
-    --shadow-light: rgba(0,0,0,0.1);
-    --shadow-medium: rgba(0,0,0,0.15);
+    --primary-color: #0c0c0c; /* Dark charcoal */
+    --secondary-color: #ffffff; /* White */
+    --accent-color: #f7a01d; /* Orange */
+    --text-color-light: #f4f4f4;
+    --text-color-dark: #333333;
+    --border-color: #dddddd;
+    --shadow-light: rgba(0, 0, 0, 0.05);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 body {
@@ -16,55 +23,28 @@ body {
     padding: 0;
     line-height: 1.6;
     color: var(--text-color-dark);
-    background-color: var(--bg-color-light);
+    background-color: var(--secondary-color);
 }
 
 .container {
-    max-width: 1100px;
+    max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
 }
 
-/* --- Heading Styles for a Clear Hierarchy --- */
-h1, h2, h3, h4, h5, h6 {
-    font-family: 'Montserrat', sans-serif;
-    color: var(--primary-color);
-    line-height: 1.2;
-}
-
-/* For the main headline on the Hero section */
-.hero-content h1 {
-    font-size: 4em;
-    font-weight: 700;
-    margin-bottom: 20px;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-    color: var(--text-color-light);
-}
-
-/* For main section titles like "Our Core Services" */
-.section-title {
-    font-size: 2.5em;
-    font-weight: 700;
-    color: var(--primary-color);
-    margin-bottom: 40px;
-    text-align: center;
-}
-
-/* For sub-headings inside cards or smaller sections */
-.card h3 {
-    font-size: 1.5em;
-    font-weight: 600;
-    margin-top: 0;
-}
-
 /* --- Header and Navigation --- */
 .main-header {
-    background-color: var(--text-color-light);
+    background-color: transparent;
     padding: 20px 0;
-    box-shadow: 0 2px 5px var(--shadow-light);
-    position: sticky;
-    top: 0;
+    position: fixed;
+    width: 100%;
     z-index: 1000;
+    transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.main-header.scrolled {
+    background-color: var(--primary-color);
+    box-shadow: 0 2px 10px var(--shadow-light);
 }
 
 .main-header .container {
@@ -76,8 +56,14 @@ h1, h2, h3, h4, h5, h6 {
 .main-header .logo a {
     font-weight: 700;
     font-size: 24px;
-    color: var(--primary-color);
+    color: var(--secondary-color);
     text-decoration: none;
+    transition: color 0.3s ease-in-out;
+}
+
+.main-header.scrolled .logo a,
+.main-header.scrolled .main-nav a {
+    color: var(--text-color-light);
 }
 
 .main-nav ul {
@@ -89,269 +75,201 @@ h1, h2, h3, h4, h5, h6 {
 
 .main-nav ul li a {
     text-decoration: none;
-    color: var(--primary-color);
+    color: var(--secondary-color);
     font-weight: 600;
     padding: 10px 15px;
     transition: color 0.3s ease;
 }
 
 .main-nav ul li a:hover {
-    color: var(--secondary-color);
+    color: var(--accent-color);
 }
 
 /* --- Hero Section --- */
 .hero-section {
-    position: relative;
-    height: 80vh;
+    height: 100vh;
+    background: url('graduation-image.jpg') no-repeat center center/cover;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
     color: var(--text-color-light);
-    overflow: hidden;
+    position: relative;
+    z-index: 1;
 }
 
-.hero-bg {
+.hero-section::before {
+    content: '';
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    overflow: hidden;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: -1;
 }
 
-.hero-image, #hero-video {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    filter: brightness(60%);
-}
-
-.hero-content {
-    position: relative;
-    z-index: 10;
-    padding: 20px;
-}
-
-.hero-content p {
-    font-size: 1.2em;
-    margin-bottom: 40px;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
-}
-
-.hero-buttons .cta-button {
-    text-decoration: none;
-    padding: 15px 30px;
+.hero-heading {
+    font-size: 3.5em;
     font-weight: 700;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
+    margin-bottom: 20px;
 }
 
-.cta-button.primary {
-    background-color: var(--secondary-color);
-    color: var(--primary-color);
+.hero-subheading {
+    font-size: 1.2em;
+    font-weight: 500;
+    margin-bottom: 40px;
+    max-width: 600px;
 }
 
-.cta-button.primary:hover {
+.cta-button {
+    display: inline-block;
+    padding: 15px 30px;
+    font-weight: 600;
+    text-decoration: none;
     background-color: var(--accent-color);
+    color: var(--primary-color);
+    border-radius: 5px;
+    transition: background-color 0.3s ease-in-out, transform 0.2s ease;
 }
 
-.cta-button.secondary {
-    background-color: transparent;
-    color: var(--text-color-light);
-    border: 2px solid var(--text-color-light);
-    margin-left: 10px;
+.cta-button:hover {
+    background-color: #e38a0f;
+    transform: translateY(-2px);
 }
 
-.cta-button.secondary:hover {
-    background-color: rgba(255, 255, 255, 0.2);
+/* --- Section General Styles --- */
+.section {
+    padding: 100px 0;
 }
 
-/* --- Services Overview Section --- */
-.services-overview {
-    padding: 60px 0;
+.section-title {
+    font-size: 2.5em;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+/* --- Services Grid --- */
+.services-section {
+    background-color: var(--bg-color-light);
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
     text-align: center;
 }
 
-.service-cards {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 30px;
-}
-
-.card {
-    background-color: var(--text-color-light);
-    padding: 30px;
+.service-card {
+    background-color: var(--secondary-color);
+    padding: 40px;
+    border: 1px solid var(--border-color);
     border-radius: 10px;
-    box-shadow: 0 4px 10px var(--shadow-light);
-    flex: 1;
-    min-width: 280px;
-    max-width: 350px;
-    text-align: left;
+    box-shadow: 0 4px 15px var(--shadow-light);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.card:hover {
+.service-card:hover {
     transform: translateY(-10px);
-    box-shadow: 0 8px 15px var(--shadow-medium);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+.card-title {
+    font-size: 1.5em;
+    font-weight: 600;
+    margin-top: 0;
+}
+
+.card-description {
+    color: #555555;
+}
+
+/* --- About Section --- */
+.about-section {
+    background-color: var(--primary-color);
+    color: var(--text-color-light);
+}
+
+.about-description {
+    font-size: 1.2em;
+    font-weight: 400;
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* --- Contact Section --- */
+.contact-section {
+    background-color: var(--secondary-color);
+    padding: 80px 0;
+}
+
+.contact-form-container {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: var(--text-color-light);
+    padding: 40px;
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+    box-shadow: 0 4px 15px var(--shadow-light);
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: var(--text-color-dark);
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    font-size: 1em;
+    transition: border-color 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--accent-color);
 }
 
 /* --- Footer --- */
 .main-footer {
     background-color: var(--primary-color);
     color: var(--text-color-light);
-    padding: 30px 0;
     text-align: center;
-}
-
-.main-footer .container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
+    padding: 20px 0;
 }
 
 .main-footer p {
     margin: 0;
 }
 
-.main-footer .footer-links a {
-    color: var(--text-color-light);
-    text-decoration: none;
-    margin-left: 20px;
-}
-
-.main-footer .footer-links a:hover {
-    text-decoration: underline;
-}
-
-/* --- Contact Page Styles --- */
-.page-heading {
-    text-align: center;
-    color: var(--primary-color);
-    font-size: 3em;
-    margin-bottom: 10px;
-}
-
-.page-subheading {
-    text-align: center;
-    font-size: 1.1em;
-    color: #555;
-    margin-bottom: 40px;
-}
-
-.contact-section {
-    padding: 60px 0;
-}
-
-.contact-layout {
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-    gap: 40px;
-    align-items: start;
-    background-color: #fff;
-    padding: 40px;
-    border-radius: 10px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
-}
-
-.contact-form-container .form-group {
-    margin-bottom: 20px;
-}
-
-.contact-form-container label {
-    display: block;
-    margin-bottom: 8px;
-    font-weight: 600;
-    color: var(--primary-color);
-}
-
-.contact-form-container input,
-.contact-form-container textarea {
-    width: 100%;
-    padding: 12px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    font-size: 1em;
-    box-sizing: border-box;
-    transition: border-color 0.3s ease;
-}
-
-.contact-form-container input:focus,
-.contact-form-container textarea:focus {
-    outline: none;
-    border-color: var(--secondary-color);
-}
-
-.contact-info-container {
-    padding-left: 20px;
-}
-
-.contact-info-container .info-block {
-    margin-bottom: 30px;
-}
-
-.contact-info-container h4 {
-    color: var(--primary-color);
-    font-size: 1.2em;
-    margin-bottom: 10px;
-    border-bottom: 2px solid var(--secondary-color);
-    display: inline-block;
-    padding-bottom: 5px;
-}
-
-.contact-info-container a {
-    color: var(--primary-color);
-    text-decoration: none;
-    transition: color 0.3s ease;
-}
-
-.contact-info-container a:hover {
-    color: var(--secondary-color);
-}
-
-.map-placeholder {
-    margin-top: 20px;
-    border-radius: 10px;
-    overflow: hidden;
-}
-
 /* --- Responsive Design --- */
 @media (max-width: 768px) {
     .main-header .container {
         flex-direction: column;
-        text-align: center;
-    }
-    .main-nav {
-        margin-top: 10px;
     }
     .main-nav ul {
-        justify-content: center;
+        margin-top: 10px;
     }
-    .hero-content h1 {
+    .hero-heading {
         font-size: 2.5em;
     }
-    .hero-content p {
-        font-size: 1em;
+    .section-title {
+        font-size: 2em;
     }
-    .hero-buttons {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-    .cta-button.secondary {
-        margin-left: 0;
-        margin-top: 10px;
-    }
-    .services-overview .service-cards, .contact-layout {
-        flex-direction: column;
-        align-items: center;
-    }
-    .main-footer .container {
-        flex-direction: column;
-    }
-    .main-footer .footer-links {
-        margin-top: 10px;
+    .services-grid {
+        grid-template-columns: 1fr;
     }
 }
