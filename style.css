@@ -170,40 +170,36 @@ body {
 
 .services-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    gap: 30px;
+    gap: 60px;
     text-align: left;
+    max-width: 900px;
+    margin: 0 auto;
 }
 
 .service-card {
     display: flex; /* Use flexbox for side-by-side alignment */
-    align-items: flex-start;
-    gap: 20px;
-    background-color: var(--secondary-color);
-    padding: 30px;
-    border: 1px solid var(--border-color);
+    align-items: center;
+    gap: 40px;
+}
+
+.service-card--reversed {
+    flex-direction: row-reverse;
+}
+
+.service-image {
+    width: 400px; /* Adjust size for larger images */
+    height: auto;
+    flex-shrink: 0;
     border-radius: 10px;
     box-shadow: 0 4px 15px var(--shadow-light);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.service-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
-}
-
-.service-icon {
-    width: 50px;
-    height: 50px;
-    flex-shrink: 0; /* Prevents the icon from shrinking */
 }
 
 .service-content {
-    flex-grow: 1; /* Allows content to take up remaining space */
+    flex-grow: 1;
 }
 
 .card-title {
-    font-size: 1.5em;
+    font-size: 2em;
     font-weight: 600;
     margin-top: 0;
 }
@@ -317,7 +313,7 @@ body {
 }
 
 /* --- Responsive Design --- */
-@media (max-width: 768px) {
+@media (max-width: 900px) {
     .main-header .container {
         flex-direction: column;
     }
@@ -330,8 +326,17 @@ body {
     .section-title {
         font-size: 2em;
     }
-    .services-grid {
-        grid-template-columns: 1fr;
+    .service-card {
+        flex-direction: column;
+        text-align: center;
+    }
+    .service-card--reversed {
+        flex-direction: column;
+    }
+    .service-image {
+        width: 100%;
+        max-width: 400px;
+        margin-bottom: 20px;
     }
     .contact-layout {
         grid-template-columns: 1fr;
